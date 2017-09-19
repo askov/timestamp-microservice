@@ -1,0 +1,17 @@
+{
+  "name": "timestampmicroservice",
+  "version": "1.0.0",
+  "description": "Basic express.js setup",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js localhost 3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
