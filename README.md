@@ -12,6 +12,7 @@ User story:
 - cd timestamp-microservice
 - npm install
 - npm start
+
 With default settings you can reach app with http://localhost:3000
 ## Examples
 - http://localhost:3000/February%2023,%201917
