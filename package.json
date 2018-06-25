@@ -1,17 +1,28 @@
 {
   "name": "timestampmicroservice",
   "version": "1.0.0",
-  "description": "Basic express.js setup",
+  "description": "Freecodecamp API project: Timestamp Microservice",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app.js localhost 3000"
+    "start": "nodemon ./server.js localhost 3000",
+    "test": "mocha --timeout 10000",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/index.js"
   },
-  "author": "",
+  "author": "Aleksandr Askov",
+  "keywords": [
+    "freecodecamp",
+    "api projects",
+    "timestamp microservice"
+  ],
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.16.3"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "chai-json-schema": "^1.5.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5"
   }
 }
