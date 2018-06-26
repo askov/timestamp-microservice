@@ -5,9 +5,7 @@ const dateformats = require('../helpers/dateformats');
  */
 function parseDateString(req, res, next) {
   const x = req.params['date_string'];
-  if (x.trim() === '') {
-    req.date = new Date();
-  } else if (dateformats.isValidUnixTimestamp(x)) {
+  if (dateformats.isValidUnixTimestamp(x)) {
     req.date = new Date(+x);
   } else if (Date.parse(x)) {
     req.date = new Date(x);

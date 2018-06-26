@@ -3,6 +3,14 @@ const express = require('express'),
 
 const parseDateString = require('../middlewares/parseDateString');
 
+router.get('/', function(req, res) {
+  const date = new Date();
+  res.json({
+    unix: date.getTime(),
+    utc: date.toUTCString(),
+  });
+});
+
 router.get('/:date_string', parseDateString, function(req, res) {
   if (req.date) {
     res.json({
