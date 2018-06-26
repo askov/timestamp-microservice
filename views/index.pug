@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    title Freecodecamp API project: Timestamp Microservice
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="theme-color" content="#1e5180")
+    meta(name="msapplication-navbutton-color" content="#1e5180")
+    meta(name="apple-mobile-web-app-status-bar-style" content="#1e5180")
+    link(rel="stylesheet", href="/css/normalize.css")
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Ubuntu")
+  body
+    header
+      h1 Freecodecamp API project: Timestamp Microservice
+    .page-content
+      h2 User stories:
+      ol.user-stories
+        li The API endpoint is <code>GET [project_url]/api/timestamp/:date_string?</code>.
+        li A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>. Note that the unix timestamp needs to be an integer (not a string) specifying milliseconds. In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.
+        li If the date string is empty it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.
+        li If the date string is valid the api returns a JSON having the structure <br><code>{"unix": <date.getTime()>, "utc" : <date.toUTCString()> }</code> e.g.<br><code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code>.
+        li If the date string is invalid the api returns a JSON having the structure <code>{"error" : "Invalid Date" }</code>.
+      h2 Example usage:
+      ul.examples
+        each href in examples
+          li #[a(href=href) #{href}]
+      h2 Example output:
+      ul.examples
+        li <code>{ "unix": 344111111124, "utc": "Wed, 26 Nov 1980 18:25:11 GMT" }</code>
+        li <code>{ "error": "Invalid Date" }</code>
+      h2 Github
+      a(href="https://github.com/askov/timestamp-microservice") https://github.com/askov/timestamp-microservice
+    footer
+      | by #[a(href="https://www.freecodecamp.org/aleks-askov") Alex Askov]

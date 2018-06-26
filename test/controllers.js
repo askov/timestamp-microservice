@@ -7,6 +7,19 @@ chai.use(require('chai-http'));
 chai.use(require('chai-json-schema'));
 
 
+describe('/GET /', () => {
+  it('index page', done => {
+    chai.request(server)
+      .get('/')
+      .end((err, res) => {
+        expect(err).to.be.null;
+        expect(res).to.have.status(200);
+        expect(res).to.be.html;
+        done();
+      });
+  });
+});
+
 describe('/GET /api/timestamp/:date_string', () => {
   let resSuccessSchema = {
     type: 'object',
