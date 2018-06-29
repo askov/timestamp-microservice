@@ -3,7 +3,7 @@ const express = require('express'),
 
 router.use('/api/timestamp', require('./timestamp'));
 
-router.use('/', (req, res) => {
+router.get('/', (req, res) => {
   const examples = [
     `${process.env.HOST}/api/timestamp/4423232`,
     `${process.env.HOST}/api/timestamp/2018-02-05`,
