@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./server.js localhost 3000",
+    "start": "node ./server.js",
     "test": "mocha --timeout 10000",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha test/index.js"
   },
