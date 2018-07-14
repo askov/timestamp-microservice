@@ -15,6 +15,9 @@
     "api projects",
     "timestamp microservice"
   ],
+  "repository": {
+    "url": "https://github.com/askov/timestamp-microservice"
+  },
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
